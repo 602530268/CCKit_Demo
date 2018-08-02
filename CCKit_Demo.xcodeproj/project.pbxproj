@@ -15,6 +15,29 @@
 		35A5B3732111AC1A00BE933F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A5B3722111AC1A00BE933F /* main.m */; };
 		35A5B37D2111AC1A00BE933F /* CCKit_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A5B37C2111AC1A00BE933F /* CCKit_DemoTests.m */; };
 		35A5B3882111AC1A00BE933F /* CCKit_DemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A5B3872111AC1A00BE933F /* CCKit_DemoUITests.m */; };
+		35A5B39B2111AFF700BE933F /* CCPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A5B3972111AFF700BE933F /* CCPickerView.m */; };
+		35A5B39C2111AFF700BE933F /* CCPickerColumnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A5B39A2111AFF700BE933F /* CCPickerColumnView.m */; };
+		35A5B3A12111B03200BE933F /* PickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A5B3A02111B03200BE933F /* PickerVC.m */; };
+		35A5B3A42111B05900BE933F /* CalendarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A5B3A32111B05900BE933F /* CalendarVC.m */; };
+		35A5B3A72111B06800BE933F /* AlertVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A5B3A62111B06800BE933F /* AlertVC.m */; };
+		35A5B3AA2111B07100BE933F /* ItemsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A5B3A92111B07100BE933F /* ItemsVC.m */; };
+		35A5B3B32111B09C00BE933F /* RollVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A5B3B22111B09C00BE933F /* RollVC.m */; };
+		35A5B3B62111B0A500BE933F /* NestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A5B3B52111B0A500BE933F /* NestVC.m */; };
+		35A5B3B92111B0AE00BE933F /* PopupVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A5B3B82111B0AE00BE933F /* PopupVC.m */; };
+		35A5B3BC2111B13A00BE933F /* BaseUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A5B3BB2111B13A00BE933F /* BaseUIViewController.m */; };
+		35A5B3C02111B19100BE933F /* CCPopupContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A5B3BF2111B19100BE933F /* CCPopupContainerView.m */; };
+		35A5B3C32111C56300BE933F /* CCCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A5B3C12111C56300BE933F /* CCCalendarView.m */; };
+		35A5B3C72111C59700BE933F /* CCCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A5B3C62111C59700BE933F /* CCCalendar.m */; };
+		35A5B3CB21129A6E00BE933F /* CCAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A5B3C921129A6E00BE933F /* CCAlertController.m */; };
+		35A5B3D121129F5300BE933F /* CCItemsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A5B3CE21129F5300BE933F /* CCItemsView.m */; };
+		35A5B3D221129F5300BE933F /* CCRepairExtraLineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A5B3CF21129F5300BE933F /* CCRepairExtraLineLayout.m */; };
+		35A5B3D62112A07A00BE933F /* ItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A5B3D52112A07A00BE933F /* ItemCell.m */; };
+		35A5B3E42112A6CF00BE933F /* CCRollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A5B3E12112A6CE00BE933F /* CCRollView.m */; };
+		35A5B3E52112A6CF00BE933F /* CCRollViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A5B3E32112A6CF00BE933F /* CCRollViewCell.m */; };
+		35A5B3EA2112A6DC00BE933F /* CCNestScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A5B3E72112A6DB00BE933F /* CCNestScrollView.m */; };
+		35A5B3EB2112A6DC00BE933F /* CCNestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A5B3E92112A6DC00BE933F /* CCNestView.m */; };
+		35A5B3EE2112B8A600BE933F /* XLPSSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A5B3ED2112B8A600BE933F /* XLPSSegmentView.m */; };
+		4EDD89C6E7DBAD350C4C8C71 /* libPods-CCKit_Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB9730AB9DB53C9D21119DE /* libPods-CCKit_Demo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +74,54 @@
 		35A5B3832111AC1A00BE933F /* CCKit_DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CCKit_DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A5B3872111AC1A00BE933F /* CCKit_DemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCKit_DemoUITests.m; sourceTree = "<group>"; };
 		35A5B3892111AC1A00BE933F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35A5B3952111AC9300BE933F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		35A5B3972111AFF700BE933F /* CCPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPickerView.m; sourceTree = "<group>"; };
+		35A5B3982111AFF700BE933F /* CCPickerColumnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPickerColumnView.h; sourceTree = "<group>"; };
+		35A5B3992111AFF700BE933F /* CCPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPickerView.h; sourceTree = "<group>"; };
+		35A5B39A2111AFF700BE933F /* CCPickerColumnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPickerColumnView.m; sourceTree = "<group>"; };
+		35A5B39F2111B03200BE933F /* PickerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PickerVC.h; sourceTree = "<group>"; };
+		35A5B3A02111B03200BE933F /* PickerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PickerVC.m; sourceTree = "<group>"; };
+		35A5B3A22111B05900BE933F /* CalendarVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarVC.h; sourceTree = "<group>"; };
+		35A5B3A32111B05900BE933F /* CalendarVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarVC.m; sourceTree = "<group>"; };
+		35A5B3A52111B06800BE933F /* AlertVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertVC.h; sourceTree = "<group>"; };
+		35A5B3A62111B06800BE933F /* AlertVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertVC.m; sourceTree = "<group>"; };
+		35A5B3A82111B07100BE933F /* ItemsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemsVC.h; sourceTree = "<group>"; };
+		35A5B3A92111B07100BE933F /* ItemsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemsVC.m; sourceTree = "<group>"; };
+		35A5B3B12111B09C00BE933F /* RollVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RollVC.h; sourceTree = "<group>"; };
+		35A5B3B22111B09C00BE933F /* RollVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RollVC.m; sourceTree = "<group>"; };
+		35A5B3B42111B0A500BE933F /* NestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NestVC.h; sourceTree = "<group>"; };
+		35A5B3B52111B0A500BE933F /* NestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NestVC.m; sourceTree = "<group>"; };
+		35A5B3B72111B0AE00BE933F /* PopupVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopupVC.h; sourceTree = "<group>"; };
+		35A5B3B82111B0AE00BE933F /* PopupVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopupVC.m; sourceTree = "<group>"; };
+		35A5B3BA2111B13A00BE933F /* BaseUIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseUIViewController.h; sourceTree = "<group>"; };
+		35A5B3BB2111B13A00BE933F /* BaseUIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseUIViewController.m; sourceTree = "<group>"; };
+		35A5B3BE2111B19100BE933F /* CCPopupContainerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCPopupContainerView.h; sourceTree = "<group>"; };
+		35A5B3BF2111B19100BE933F /* CCPopupContainerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCPopupContainerView.m; sourceTree = "<group>"; };
+		35A5B3C12111C56300BE933F /* CCCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCalendarView.m; sourceTree = "<group>"; };
+		35A5B3C22111C56300BE933F /* CCCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCalendarView.h; sourceTree = "<group>"; };
+		35A5B3C52111C59600BE933F /* CCCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCalendar.h; sourceTree = "<group>"; };
+		35A5B3C62111C59700BE933F /* CCCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCalendar.m; sourceTree = "<group>"; };
+		35A5B3C921129A6E00BE933F /* CCAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCAlertController.m; sourceTree = "<group>"; };
+		35A5B3CA21129A6E00BE933F /* CCAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCAlertController.h; sourceTree = "<group>"; };
+		35A5B3CD21129F5300BE933F /* CCRepairExtraLineLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCRepairExtraLineLayout.h; sourceTree = "<group>"; };
+		35A5B3CE21129F5300BE933F /* CCItemsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCItemsView.m; sourceTree = "<group>"; };
+		35A5B3CF21129F5300BE933F /* CCRepairExtraLineLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCRepairExtraLineLayout.m; sourceTree = "<group>"; };
+		35A5B3D021129F5300BE933F /* CCItemsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCItemsView.h; sourceTree = "<group>"; };
+		35A5B3D42112A07A00BE933F /* ItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemCell.h; sourceTree = "<group>"; };
+		35A5B3D52112A07A00BE933F /* ItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemCell.m; sourceTree = "<group>"; };
+		35A5B3E02112A6CE00BE933F /* CCRollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCRollView.h; sourceTree = "<group>"; };
+		35A5B3E12112A6CE00BE933F /* CCRollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCRollView.m; sourceTree = "<group>"; };
+		35A5B3E22112A6CF00BE933F /* CCRollViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCRollViewCell.h; sourceTree = "<group>"; };
+		35A5B3E32112A6CF00BE933F /* CCRollViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCRollViewCell.m; sourceTree = "<group>"; };
+		35A5B3E62112A6DB00BE933F /* CCNestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNestView.h; sourceTree = "<group>"; };
+		35A5B3E72112A6DB00BE933F /* CCNestScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNestScrollView.m; sourceTree = "<group>"; };
+		35A5B3E82112A6DC00BE933F /* CCNestScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNestScrollView.h; sourceTree = "<group>"; };
+		35A5B3E92112A6DC00BE933F /* CCNestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNestView.m; sourceTree = "<group>"; };
+		35A5B3EC2112B8A500BE933F /* XLPSSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLPSSegmentView.h; sourceTree = "<group>"; };
+		35A5B3ED2112B8A600BE933F /* XLPSSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLPSSegmentView.m; sourceTree = "<group>"; };
+		592871DA5942EAC45B5A4F7F /* Pods-CCKit_Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCKit_Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CCKit_Demo/Pods-CCKit_Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		8FA5C5EBD860CCE5467CDCDA /* Pods-CCKit_Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCKit_Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CCKit_Demo/Pods-CCKit_Demo.release.xcconfig"; sourceTree = "<group>"; };
+		DDB9730AB9DB53C9D21119DE /* libPods-CCKit_Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CCKit_Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EDD89C6E7DBAD350C4C8C71 /* libPods-CCKit_Demo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +150,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2142F13B81F8F268A7A1681F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DDB9730AB9DB53C9D21119DE /* libPods-CCKit_Demo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		35A5B3572111AC1800BE933F = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +165,8 @@
 				35A5B37B2111AC1A00BE933F /* CCKit_DemoTests */,
 				35A5B3862111AC1A00BE933F /* CCKit_DemoUITests */,
 				35A5B3612111AC1800BE933F /* Products */,
+				5BA98797D99C10C1F2C7E804 /* Pods */,
+				2142F13B81F8F268A7A1681F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,13 +185,17 @@
 			children = (
 				35A5B3632111AC1800BE933F /* AppDelegate.h */,
 				35A5B3642111AC1800BE933F /* AppDelegate.m */,
-				35A5B3662111AC1800BE933F /* ViewController.h */,
-				35A5B3672111AC1800BE933F /* ViewController.m */,
+				35A5B39D2111AFF900BE933F /* CCKit */,
+				35A5B3BA2111B13A00BE933F /* BaseUIViewController.h */,
+				35A5B3BB2111B13A00BE933F /* BaseUIViewController.m */,
+				35A5B3EF2112FE2A00BE933F /* Controllers */,
+				35A5B3D32112A05F00BE933F /* Views */,
 				35A5B3692111AC1800BE933F /* Main.storyboard */,
 				35A5B36C2111AC1A00BE933F /* Assets.xcassets */,
 				35A5B36E2111AC1A00BE933F /* LaunchScreen.storyboard */,
 				35A5B3712111AC1A00BE933F /* Info.plist */,
 				35A5B3722111AC1A00BE933F /* main.m */,
+				35A5B3952111AC9300BE933F /* PrefixHeader.pch */,
 			);
 			path = CCKit_Demo;
 			sourceTree = "<group>";
@@ -132,6 +218,136 @@
 			path = CCKit_DemoUITests;
 			sourceTree = "<group>";
 		};
+		35A5B3962111AFF700BE933F /* CCPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				35A5B3992111AFF700BE933F /* CCPickerView.h */,
+				35A5B3972111AFF700BE933F /* CCPickerView.m */,
+				35A5B3982111AFF700BE933F /* CCPickerColumnView.h */,
+				35A5B39A2111AFF700BE933F /* CCPickerColumnView.m */,
+			);
+			path = CCPickerView;
+			sourceTree = "<group>";
+		};
+		35A5B39D2111AFF900BE933F /* CCKit */ = {
+			isa = PBXGroup;
+			children = (
+				35A5B3BD2111B18100BE933F /* CCPopupContainerView */,
+				35A5B3962111AFF700BE933F /* CCPickerView */,
+				35A5B3C42111C56600BE933F /* CCCalendarView */,
+				35A5B3C821129A6E00BE933F /* CCAlertController */,
+				35A5B3CC21129F5300BE933F /* CCItemsView */,
+				35A5B3DE2112A6A800BE933F /* CCRollView */,
+				35A5B3DF2112A6AE00BE933F /* CCNestView */,
+			);
+			path = CCKit;
+			sourceTree = "<group>";
+		};
+		35A5B3BD2111B18100BE933F /* CCPopupContainerView */ = {
+			isa = PBXGroup;
+			children = (
+				35A5B3BE2111B19100BE933F /* CCPopupContainerView.h */,
+				35A5B3BF2111B19100BE933F /* CCPopupContainerView.m */,
+			);
+			path = CCPopupContainerView;
+			sourceTree = "<group>";
+		};
+		35A5B3C42111C56600BE933F /* CCCalendarView */ = {
+			isa = PBXGroup;
+			children = (
+				35A5B3C22111C56300BE933F /* CCCalendarView.h */,
+				35A5B3C12111C56300BE933F /* CCCalendarView.m */,
+				35A5B3C52111C59600BE933F /* CCCalendar.h */,
+				35A5B3C62111C59700BE933F /* CCCalendar.m */,
+			);
+			path = CCCalendarView;
+			sourceTree = "<group>";
+		};
+		35A5B3C821129A6E00BE933F /* CCAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				35A5B3CA21129A6E00BE933F /* CCAlertController.h */,
+				35A5B3C921129A6E00BE933F /* CCAlertController.m */,
+			);
+			path = CCAlertController;
+			sourceTree = "<group>";
+		};
+		35A5B3CC21129F5300BE933F /* CCItemsView */ = {
+			isa = PBXGroup;
+			children = (
+				35A5B3D021129F5300BE933F /* CCItemsView.h */,
+				35A5B3CE21129F5300BE933F /* CCItemsView.m */,
+				35A5B3CD21129F5300BE933F /* CCRepairExtraLineLayout.h */,
+				35A5B3CF21129F5300BE933F /* CCRepairExtraLineLayout.m */,
+			);
+			path = CCItemsView;
+			sourceTree = "<group>";
+		};
+		35A5B3D32112A05F00BE933F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				35A5B3D42112A07A00BE933F /* ItemCell.h */,
+				35A5B3D52112A07A00BE933F /* ItemCell.m */,
+				35A5B3EC2112B8A500BE933F /* XLPSSegmentView.h */,
+				35A5B3ED2112B8A600BE933F /* XLPSSegmentView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		35A5B3DE2112A6A800BE933F /* CCRollView */ = {
+			isa = PBXGroup;
+			children = (
+				35A5B3E02112A6CE00BE933F /* CCRollView.h */,
+				35A5B3E12112A6CE00BE933F /* CCRollView.m */,
+				35A5B3E22112A6CF00BE933F /* CCRollViewCell.h */,
+				35A5B3E32112A6CF00BE933F /* CCRollViewCell.m */,
+			);
+			path = CCRollView;
+			sourceTree = "<group>";
+		};
+		35A5B3DF2112A6AE00BE933F /* CCNestView */ = {
+			isa = PBXGroup;
+			children = (
+				35A5B3E62112A6DB00BE933F /* CCNestView.h */,
+				35A5B3E92112A6DC00BE933F /* CCNestView.m */,
+				35A5B3E82112A6DC00BE933F /* CCNestScrollView.h */,
+				35A5B3E72112A6DB00BE933F /* CCNestScrollView.m */,
+			);
+			path = CCNestView;
+			sourceTree = "<group>";
+		};
+		35A5B3EF2112FE2A00BE933F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				35A5B3662111AC1800BE933F /* ViewController.h */,
+				35A5B3672111AC1800BE933F /* ViewController.m */,
+				35A5B3B72111B0AE00BE933F /* PopupVC.h */,
+				35A5B3B82111B0AE00BE933F /* PopupVC.m */,
+				35A5B39F2111B03200BE933F /* PickerVC.h */,
+				35A5B3A02111B03200BE933F /* PickerVC.m */,
+				35A5B3A22111B05900BE933F /* CalendarVC.h */,
+				35A5B3A32111B05900BE933F /* CalendarVC.m */,
+				35A5B3A52111B06800BE933F /* AlertVC.h */,
+				35A5B3A62111B06800BE933F /* AlertVC.m */,
+				35A5B3A82111B07100BE933F /* ItemsVC.h */,
+				35A5B3A92111B07100BE933F /* ItemsVC.m */,
+				35A5B3B12111B09C00BE933F /* RollVC.h */,
+				35A5B3B22111B09C00BE933F /* RollVC.m */,
+				35A5B3B42111B0A500BE933F /* NestVC.h */,
+				35A5B3B52111B0A500BE933F /* NestVC.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5BA98797D99C10C1F2C7E804 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				592871DA5942EAC45B5A4F7F /* Pods-CCKit_Demo.debug.xcconfig */,
+				8FA5C5EBD860CCE5467CDCDA /* Pods-CCKit_Demo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +355,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 35A5B38C2111AC1A00BE933F /* Build configuration list for PBXNativeTarget "CCKit_Demo" */;
 			buildPhases = (
+				8C797D6E1D68CD4A6D4B546A /* [CP] Check Pods Manifest.lock */,
 				35A5B35C2111AC1800BE933F /* Sources */,
 				35A5B35D2111AC1800BE933F /* Frameworks */,
 				35A5B35E2111AC1800BE933F /* Resources */,
+				6F7ACC7AE0BBF08EA71B505F /* [CP] Embed Pods Frameworks */,
+				DF69498CAF6788980D7860AB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,14 +476,90 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6F7ACC7AE0BBF08EA71B505F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CCKit_Demo/Pods-CCKit_Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C797D6E1D68CD4A6D4B546A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CCKit_Demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF69498CAF6788980D7860AB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CCKit_Demo/Pods-CCKit_Demo-resources.sh",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CCKit_Demo/Pods-CCKit_Demo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		35A5B35C2111AC1800BE933F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35A5B3A12111B03200BE933F /* PickerVC.m in Sources */,
+				35A5B3EA2112A6DC00BE933F /* CCNestScrollView.m in Sources */,
+				35A5B39B2111AFF700BE933F /* CCPickerView.m in Sources */,
+				35A5B3D62112A07A00BE933F /* ItemCell.m in Sources */,
+				35A5B3D221129F5300BE933F /* CCRepairExtraLineLayout.m in Sources */,
+				35A5B3A42111B05900BE933F /* CalendarVC.m in Sources */,
 				35A5B3682111AC1800BE933F /* ViewController.m in Sources */,
+				35A5B3BC2111B13A00BE933F /* BaseUIViewController.m in Sources */,
+				35A5B3E42112A6CF00BE933F /* CCRollView.m in Sources */,
+				35A5B3E52112A6CF00BE933F /* CCRollViewCell.m in Sources */,
+				35A5B3CB21129A6E00BE933F /* CCAlertController.m in Sources */,
+				35A5B3C32111C56300BE933F /* CCCalendarView.m in Sources */,
+				35A5B3C72111C59700BE933F /* CCCalendar.m in Sources */,
+				35A5B39C2111AFF700BE933F /* CCPickerColumnView.m in Sources */,
+				35A5B3B62111B0A500BE933F /* NestVC.m in Sources */,
+				35A5B3A72111B06800BE933F /* AlertVC.m in Sources */,
+				35A5B3C02111B19100BE933F /* CCPopupContainerView.m in Sources */,
+				35A5B3B92111B0AE00BE933F /* PopupVC.m in Sources */,
+				35A5B3EE2112B8A600BE933F /* XLPSSegmentView.m in Sources */,
+				35A5B3AA2111B07100BE933F /* ItemsVC.m in Sources */,
+				35A5B3B32111B09C00BE933F /* RollVC.m in Sources */,
+				35A5B3D121129F5300BE933F /* CCItemsView.m in Sources */,
 				35A5B3732111AC1A00BE933F /* main.m in Sources */,
 				35A5B3652111AC1800BE933F /* AppDelegate.m in Sources */,
+				35A5B3EB2112A6DC00BE933F /* CCNestView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,10 +726,15 @@
 		};
 		35A5B38D2111AC1A00BE933F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 592871DA5942EAC45B5A4F7F /* Pods-CCKit_Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M3YN599LE4;
+				GCC_PREFIX_HEADER = /Users/chencheng/Desktop/Code/XingLiao/CCKit_Demo/CCKit_Demo/PrefixHeader.pch;
 				INFOPLIST_FILE = CCKit_Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -447,10 +747,15 @@
 		};
 		35A5B38E2111AC1A00BE933F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FA5C5EBD860CCE5467CDCDA /* Pods-CCKit_Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M3YN599LE4;
+				GCC_PREFIX_HEADER = /Users/chencheng/Desktop/Code/XingLiao/CCKit_Demo/CCKit_Demo/PrefixHeader.pch;
 				INFOPLIST_FILE = CCKit_Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

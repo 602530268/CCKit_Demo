@@ -1,0 +1,27 @@
+PODS:
+  - DZNEmptyDataSet (1.8.1)
+  - Masonry (1.1.0)
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - DZNEmptyDataSet (= 1.8.1)
+  - Masonry (= 1.1.0)
+  - ReactiveCocoa (= 2.5)
+  - SVProgressHUD (= 2.2.5)
+
+SPEC CHECKSUMS:
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: d4cd2a98db439886c965f8e507e5a1194610fd40
+
+COCOAPODS: 1.4.0
