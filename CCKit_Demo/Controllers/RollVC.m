@@ -33,10 +33,10 @@
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [SVProgressHUD dismiss];
         });
-        _rollView = [[CCRollView alloc] initWithFrame:CGRectZero imgs:imgs];
-        [self.view addSubview:_rollView];
-        _rollView.rollIntervalTime = 2.f;
-        [_rollView mas_makeConstraints:^(MASConstraintMaker *make) {
+        self.rollView = [[CCRollView alloc] initWithFrame:CGRectZero imgs:imgs];
+        [self.view addSubview:self.rollView];
+        self.rollView.rollIntervalTime = 2.f;
+        [self.rollView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.center.equalTo(self.view);
             make.width.height.equalTo(self.view.mas_width);
         }];

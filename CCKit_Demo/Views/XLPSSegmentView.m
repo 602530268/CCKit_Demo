@@ -74,9 +74,9 @@
         [[btn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
             
             [weakSelf changeBtnsStatusWith:btn];
-            CGFloat lineWidth = CGRectGetWidth(_bottomLineView.bounds);
+            CGFloat lineWidth = CGRectGetWidth(self.bottomLineView.bounds);
             [UIView animateWithDuration:0.25f animations:^{
-                [_bottomLineView mas_updateConstraints:^(MASConstraintMaker *make) {
+                [self.bottomLineView mas_updateConstraints:^(MASConstraintMaker *make) {
                     make.left.equalTo(self).offset(lineWidth * i);
                 }];
                 [self layoutIfNeeded];

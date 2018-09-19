@@ -41,8 +41,8 @@
     CGFloat containerViewHeight = CGRectGetHeight(self.containerView.bounds);
     CGFloat duration = animate ? _duration : 0;
     [UIView animateWithDuration:duration animations:^{
-        _shadeView.alpha = 1.f;
-        [_containerView mas_updateConstraints:^(MASConstraintMaker *make) {
+        self.shadeView.alpha = 1.f;
+        [self.containerView mas_updateConstraints:^(MASConstraintMaker *make) {
             if (self.direction == XLPSPopupDirectionFromBottomToTop) {
                 make.top.equalTo(self.mas_bottom).offset(-containerViewHeight);
             }else {
@@ -58,10 +58,10 @@
 - (void)dismissWith:(BOOL)animate finish:(void (^)(void))finish {
     CGFloat duration = animate ? _duration : 0;
     [UIView animateWithDuration:duration animations:^{
-        _shadeView.alpha = 0;
+        self.shadeView.alpha = 0;
         
         CGFloat containerViewHeight = CGRectGetHeight(self.containerView.bounds);
-        [_containerView mas_updateConstraints:^(MASConstraintMaker *make) {
+        [self.containerView mas_updateConstraints:^(MASConstraintMaker *make) {
             if (self.direction == XLPSPopupDirectionFromBottomToTop) {
                 make.top.equalTo(self.mas_bottom);
             }else {

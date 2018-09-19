@@ -42,7 +42,7 @@ static NSString *kCellIdentifier = @"kCellIdentifier";
 
 # pragma mark - UITableViewDataSource,UITableViewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 100;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -54,6 +54,7 @@ static NSString *kCellIdentifier = @"kCellIdentifier";
 # pragma mark - UI
 - (void)createUI {
     self.view.backgroundColor = [UIColor whiteColor];
+//    self.automaticallyAdjustsScrollViewInsets = NO;
     [self createNestView];
 }
 
@@ -94,8 +95,8 @@ static NSString *kCellIdentifier = @"kCellIdentifier";
 }
 
 - (void)createHeaderView {
-//    UIImageView *imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ps_wallet_bg"]];
-    UIImageView *imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Banner Index"]];
+    UIImageView *imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ps_wallet_bg"]];
+//    UIImageView *imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Banner Index"]];
     imgView.contentMode = UIViewContentModeScaleAspectFit;
     imgView.clipsToBounds = YES;
     _headerView = imgView;
@@ -126,13 +127,13 @@ static NSString *kCellIdentifier = @"kCellIdentifier";
         dispatch_async(dispatch_get_main_queue(), ^{
             [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
                 if (i == 0) {
-                    make.left.equalTo(_scrollView);
+                    make.left.equalTo(self.scrollView);
                 }else {
                     make.left.equalTo(leftView.mas_right);
                 }
-                make.top.equalTo(_scrollView);
+                make.top.equalTo(self.scrollView);
                 make.width.equalTo(self.view);
-                make.height.equalTo(_scrollView);
+                make.height.equalTo(self.scrollView);
             }];
         });
         leftView = tableView;

@@ -132,7 +132,13 @@
 - (void)mainScrollViewScroll:(UIScrollView *)scrollView {
     if (scrollView == self.mainScrollView) {
         CGFloat contentOffset = [self heightForContainerCanScroll] - [self contentInsetTop];
-//        NSLog(@"contentOffset: %f，scrollView.contentOffset.y: %f",contentOffset,scrollView.contentOffset.y);
+        
+//        contentOffset = CGRectGetHeight(_headerView.frame); //容器可滚动范围
+//        CGFloat offsetY = scrollView.contentOffset.y;
+        
+        NSLog(@"contentOffset: %f，scrollView.contentOffset.y: %f",contentOffset,scrollView.contentOffset.y);
+        NSLog(@"contentInset: %@",[NSValue valueWithUIEdgeInsets:scrollView.contentInset]);
+//        self.mainScrollView.adjustedContentInset
         
         if (!_canScroll) {
             // 这里通过固定contentOffset的值，来实现不滚动
@@ -195,7 +201,7 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         _mainScrollView.delegate = self;    //延迟一帧设置，避免iOS10之后scrollViewDidScroll默认执行导致的问题
         //设置大一些的contentSize使其可以滑动，因为有滚动逻辑处理，所以只要保证大于两页高度就可以了
-        _mainScrollView.contentSize = CGSizeMake(0, CGRectGetHeight(self.bounds) * 2);
+        _mainScrollView.contentSize = CGSizeMake(0, CGRectGetHeight(self.bounds) * 1.5f);
     });
 }
 

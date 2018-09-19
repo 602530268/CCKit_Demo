@@ -12,18 +12,25 @@
 
 @property(nonatomic,strong) UIColor *normalColor;
 @property(nonatomic,strong) UIColor *selectColor;
-@property(nonatomic,strong) UIColor *maskColor; 
+@property(nonatomic,strong) UIColor *maskColor;
 
-@property(nonatomic,assign) NSInteger currentRow;     //记录当前是第几行
-@property(nonatomic,strong) id value;   //值
+@property(nonatomic,assign) NSInteger currentRow; //记录当前是第几行
+@property(nonatomic,strong) NSString *value; //值
+@property(nonatomic,copy) void(^columnViewBlock)(NSInteger row, NSString *value);
 
 - (instancetype)initWithFrame:(CGRect)frame rowHeight:(CGFloat)rowHeight;
 
-//加载数据
+//刷新数据
 - (void)reloadWith:(NSArray <NSString *>*)datas;
+
+//刷新指定行
+- (void)reloadRowWith:(NSInteger)row obj:(NSString *)obj;
 
 //跳到选中行
 - (void)selectRow:(NSInteger)row animate:(BOOL)animate;
+
+//恢复遮罩层
+- (void)restoreMaskLayer;
 
 @end
 

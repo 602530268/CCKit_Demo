@@ -23,16 +23,32 @@ static NSString *kCCPickerCellIdentifier = @"kCCPickerCellIdentifier";
 # pragma mark - APIs (public)
 - (void)reloadWith:(NSArray <NSString *>*)datas {
     _datas = datas.mutableCopy;
+    _currentRow = _currentRow >= _datas.count - 1 ? _datas.count - 1 : _currentRow;
     [self.collectionView reloadData];
+}
+
+- (void)reloadRowWith:(NSInteger)row obj:(NSString *)obj {
+    if (obj) {
+        [self.datas replaceObjectAtIndex:row withObject:obj];
+    }
+    NSIndexPath *indexPath = [NSIndexPath indexPathWithIndex:row];
+    [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
+}
+
+- (void)restoreMaskLayer {
+    [self handle:self.collectionView];
 }
 
 //跳到选中行
 - (void)selectRow:(NSInteger)row animate:(BOOL)animate {
     CGFloat contentOffsetY = row * self.rowHeight - self.collectionView.contentInset.top;
     [self.collectionView setContentOffset:CGPointMake(0, contentOffsetY) animated:animate];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self scrollViewDidEndScroll];
+    });
 }
 
-- (id)value {
+- (NSString *)value {
     return _datas[_currentRow];
 }
 
@@ -48,12 +64,19 @@ static NSString *kCCPickerCellIdentifier = @"kCCPickerCellIdentifier";
     cell.titleLbl.textColor = self.normalColor;
     cell.renderLbl.textColor = self.selectColor;
     cell.renderLbl.backgroundColor = self.maskColor;
+    //    if (indexPath.row == _currentRow) {
+    //        cell.maskLayer.hidden = NO;
+    //    }else {
+    //        cell.maskLayer.hidden = YES;
+    //    }
     
     return cell;
 }
 
 //点击时
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == _currentRow) return;
+    _currentRow = indexPath.row;
     [self selectRow:indexPath.row animate:YES];
 }
 
@@ -88,7 +111,33 @@ static NSString *kCCPickerCellIdentifier = @"kCCPickerCellIdentifier";
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    [self handle:scrollView];
+}
 
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    BOOL scrollToScrollStop = !scrollView.tracking && !scrollView.dragging && !scrollView.decelerating;
+    if (scrollToScrollStop) {
+        [self scrollViewDidEndScroll];
+    }
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    if (!decelerate) {
+        BOOL dragToDragStop = scrollView.tracking && !scrollView.dragging && !scrollView.decelerating;
+        if (dragToDragStop) {
+            [self scrollViewDidEndScroll];
+        }
+    }
+}
+
+//停止滚动
+- (void)scrollViewDidEndScroll {
+    if (self.columnViewBlock) self.columnViewBlock(_currentRow,self.value);
+}
+
+#pragma mark - APIs (private)
+- (void)handle:(UIScrollView *)scrollView {
+    
     /*
      在有效区间内时，总会有两个cell需要改变maskLayer的值
      计算中间展示区间内对应了两个cell
@@ -111,7 +160,7 @@ static NSString *kCCPickerCellIdentifier = @"kCCPickerCellIdentifier";
     if (dValue < 0) {
         dValue += self.rowHeight;   //此时frame.y会小一个height值，这里特殊处理
     }
-//    NSLog(@"差值: %f",dValue);
+    //    NSLog(@"差值: %f",dValue);
     
     topCell.maskLayer.hidden = NO;
     bottomCell.maskLayer.hidden = NO;
@@ -155,10 +204,10 @@ static NSString *kCCPickerCellIdentifier = @"kCCPickerCellIdentifier";
     _collectionView.showsVerticalScrollIndicator = NO;
     _collectionView.showsHorizontalScrollIndicator = NO;
     [self addSubview:_collectionView];
-
+    
     dispatch_async(dispatch_get_main_queue(), ^{
-        CGFloat inset = (_collectionView.frame.size.height - _rowHeight) / 2;
-        _collectionView.contentInset = UIEdgeInsetsMake(inset, 0, inset, 0);
+        CGFloat inset = (self.collectionView.frame.size.height - self.rowHeight) / 2;
+        self.collectionView.contentInset = UIEdgeInsetsMake(inset, 0, inset, 0);
         [self selectRow:0 animate:NO];  //默认选择0
     });
     
@@ -178,9 +227,11 @@ static NSString *kCCPickerCellIdentifier = @"kCCPickerCellIdentifier";
         
         _titleLbl = [[UILabel alloc] init];
         _titleLbl.textColor = [UIColor lightGrayColor];
+        _titleLbl.backgroundColor = [UIColor whiteColor];
         _titleLbl.textAlignment = NSTextAlignmentCenter;
         [self addSubview:_titleLbl];
         _titleLbl.translatesAutoresizingMaskIntoConstraints = NO;
+        
         [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[titleLbl]|" options:0 metrics:nil views:@{@"titleLbl":_titleLbl}]];
         [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[titleLbl]|" options:0 metrics:nil views:@{@"titleLbl":_titleLbl}]];
         
@@ -196,16 +247,6 @@ static NSString *kCCPickerCellIdentifier = @"kCCPickerCellIdentifier";
         _maskLayer = [[CALayer alloc] init];
         _maskLayer.backgroundColor = [UIColor whiteColor].CGColor;
         _renderLbl.layer.mask = _maskLayer;
-        
-//        /*
-//         没时间设计接口，先在这里硬定制吧,chen record
-//         */
-//        _titleLbl.textColor = COLOR_666666;
-//        _titleLbl.font = [UIFont systemFontOfSize:15.f];
-//
-//        _renderLbl.textColor = COLOR_03A9F4;
-//        _renderLbl.font = [UIFont systemFontOfSize:15.f];
-//        _renderLbl.backgroundColor = HEXCOLOR(0xE3F3FA);
     }
     return self;
 }

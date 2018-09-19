@@ -60,7 +60,7 @@ static NSInteger sectionCount = 100;
 - (void)updateRollView:(BOOL)animate {
     //延迟一帧设置
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:_currentIndex inSection:sectionCount/2] atScrollPosition:UICollectionViewScrollPositionNone animated:animate];
+        [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.currentIndex inSection:sectionCount/2] atScrollPosition:UICollectionViewScrollPositionNone animated:animate];
     });
 }
 

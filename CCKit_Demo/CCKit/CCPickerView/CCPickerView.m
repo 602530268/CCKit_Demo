@@ -9,21 +9,110 @@
 #import "CCPickerView.h"
 #import "CCPickerColumnView.h"
 
+@interface CCPickerView ()
+{
+    
+}
+
+@end
+
 @implementation CCPickerView
 
 # pragma mark - APIs(public)
+- (void)normalRow:(NSInteger)row column:(NSInteger)column {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self selectRow:row column:column animate:NO];
+    });
+}
+
 - (void)selectRow:(NSInteger)row column:(NSInteger)column animate:(BOOL)animate {
     CCPickerColumnView *columnView = self.columnViews[column];
     [columnView selectRow:row animate:animate];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [columnView restoreMaskLayer];
+    });
 }
 
-- (NSArray <NSString *>*)obtainValues {
+- (NSInteger)column {
+    return self.datas.count;
+}
+
+- (NSInteger)rowWithColumn:(NSInteger)column {
+    @try {
+        return [self.datas[column] count];
+    }@catch (NSException *e) {return 0;}
+}
+
+- (NSString *)rowStringWithRow:(NSInteger)row column:(NSInteger)column {
+    @try {
+        return self.datas[column][row];
+    }@catch (NSException *e) {return nil;}
+}
+
+- (NSString *)currentValueWith:(NSInteger)column {
+    @try {
+        CCPickerColumnView *columnView = self.columnViews[column];
+        return columnView.value;
+    }@catch (NSException *e) {return nil;}
+}
+
+- (NSArray *)toArray {
+    NSInteger column = [self column];
     NSMutableArray *arr = @[].mutableCopy;
-    for (int i = 0; i < self.columnViews.count; i++) {
+    for (int i = 0;i < column; i++) {
         CCPickerColumnView *columnView = self.columnViews[i];
         [arr addObject:columnView.value];
     }
     return arr;
+}
+
+- (NSString *)componentsJoinedByString:(NSString *)separator {
+    NSArray *arr = [self toArray];
+    return [arr componentsJoinedByString:separator];;
+}
+
+- (void)reloadRowWith:(NSInteger)row column:(NSInteger)column obj:(NSString *)obj {
+    CCPickerColumnView *columnView = self.columnViews[column];
+    [columnView reloadRowWith:row obj:obj];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [columnView restoreMaskLayer];
+    });
+}
+
+- (void)reloadColumnWith:(NSInteger)column array:(NSArray *)array {
+    CCPickerColumnView *columnView = self.columnViews[column];
+    if (array && array.count != 0) {
+        NSArray *sub = self.datas[column];
+        if (![sub isEqualToArray:array]) {
+            [self.datas replaceObjectAtIndex:column withObject:array];
+            [columnView reloadWith:self.datas[column]];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [columnView restoreMaskLayer];
+            });
+        }
+    }
+}
+
+- (void)reloadAllDatas {
+    NSInteger column = [self column];
+    for (int i = 0; i < column; i++) {
+        [self reloadColumnWith:i array:nil];
+    }
+}
+
+#pragma mark - Event
+- (void)columnViewEvent:(CCPickerColumnView *)columnView {
+    __weak typeof(self) weakSelf = self;
+    columnView.columnViewBlock = ^(NSInteger row, NSString *value) {
+        NSInteger column = 0;
+        for (int i = 0; i < weakSelf.columnViews.count; i++) {
+            if (columnView == weakSelf.columnViews[i]) {
+                column = i;
+                break;
+            }
+        }
+        if (weakSelf.pickerViewBlock) weakSelf.pickerViewBlock(row, column, value);
+    };
 }
 
 # pragma mark - Setter
@@ -94,6 +183,7 @@
         
         NSArray *subDatas = _datas[i];
         [columnView reloadWith:subDatas];
+        [self columnViewEvent:columnView];
         
         [_columnViews addObject:columnView];
     }

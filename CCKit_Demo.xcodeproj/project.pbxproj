@@ -729,7 +729,7 @@
 			baseConfigurationReference = 592871DA5942EAC45B5A4F7F /* Pods-CCKit_Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M3YN599LE4;
 				GCC_PREFIX_HEADER = /Users/chencheng/Desktop/Code/XingLiao/CCKit_Demo/CCKit_Demo/PrefixHeader.pch;
@@ -750,7 +750,7 @@
 			baseConfigurationReference = 8FA5C5EBD860CCE5467CDCDA /* Pods-CCKit_Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M3YN599LE4;
 				GCC_PREFIX_HEADER = /Users/chencheng/Desktop/Code/XingLiao/CCKit_Demo/CCKit_Demo/PrefixHeader.pch;
