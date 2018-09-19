@@ -64,11 +64,11 @@ static NSString *kCCPickerCellIdentifier = @"kCCPickerCellIdentifier";
     cell.titleLbl.textColor = self.normalColor;
     cell.renderLbl.textColor = self.selectColor;
     cell.renderLbl.backgroundColor = self.maskColor;
-    //    if (indexPath.row == _currentRow) {
-    //        cell.maskLayer.hidden = NO;
-    //    }else {
-    //        cell.maskLayer.hidden = YES;
-    //    }
+    if (indexPath.row == _currentRow) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self restoreMaskLayer];
+        });
+    }
     
     return cell;
 }
