@@ -48,12 +48,13 @@ static NSString *kCellIdentifier = @"kCellIdentifier";
         [weakSelf.navigationController pushViewController:vc animated:YES];
     };
     
+    
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        Class Controller = NSClassFromString(@"PickerVC");
-        BaseUIViewController *vc = [[Controller alloc]init];
-        vc.title = @"CCPickerView";
-        
-        [weakSelf.navigationController pushViewController:vc animated:YES];
+//        Class Controller = NSClassFromString(@"PickerVC");
+//        BaseUIViewController *vc = [[Controller alloc]init];
+//        vc.title = @"CCPickerView";
+//
+//        [weakSelf.navigationController pushViewController:vc animated:YES];
     });
 }
 

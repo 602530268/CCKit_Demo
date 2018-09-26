@@ -9,6 +9,7 @@
 #import "CalendarVC.h"
 
 #import "CCCalendarView.h"
+#import "CCCalendar.h"
 
 @interface CalendarVC ()
 
@@ -30,6 +31,9 @@
         make.center.equalTo(self.view);
         make.width.height.equalTo(self.view.mas_width).multipliedBy(0.8f);
     }];
+    
+    CCCalendar *calendar = [[CCCalendar alloc] init];
+    [calendar logCalendarToYear:[NSDate date]];
 }
 
 - (void)didReceiveMemoryWarning {

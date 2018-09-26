@@ -101,7 +101,7 @@
     NSInteger firstWeekDay = [self convertDateToFirstWeekDay:date];
     NSInteger totalDays = [self convertDateToTotalDays:date];
     
-    NSInteger line = totalDays <= 28 ? 4 : 5;
+    NSInteger line = 5;
     NSInteger column = 7;
     
     NSInteger available = 1;    //超过总天数后为下月
@@ -188,7 +188,7 @@
     
     printf("第%ld月\n",(long)month);
     
-    NSInteger line = totalDays <= 28 ? 4 : 5;
+    NSInteger line = 5;
     NSInteger column = 7;
     
     NSInteger available = 1;    //超过总天数后为下月
